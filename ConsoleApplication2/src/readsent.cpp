@@ -180,8 +180,9 @@ int get_sent_or_line(
 	unsigned char inputmode
 ) {
 	if (inputmode) {	/* line-by-line input */
-		if (fgets_unicode(sent, SENTSIZE-1, fp))
+		if (fgets_unicode(sent, SENTSIZE - 1, fp))
 			return 1;
+
 		else return 0;
 	} else return (read_sentence(fp, sent) != EOF);
 }

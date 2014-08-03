@@ -11,10 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\err-code.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\out-ham.cpp" />
     <ClCompile Include="src\out-tok.cpp" />
     <ClCompile Include="src\readsent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TextAnalyzer.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_TextAnalyzer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{068AA073-EC8B-47AE-B483-AC9FE4806E79}</ProjectGuid>
@@ -59,12 +66,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Qt\Qt5.3.1\5.3\msvc2013_opengl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>exersice.exe</OutputFile>
-      <AdditionalDependencies>C:\Users\dlsrnsi\Downloads\KLT2010-TestVersion(1)\EXE\KLT2000-TEST.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\dlsrnsi\Downloads\KLT2010-TestVersion(1)\EXE\KLT2000-TEST.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Qt\Qt5.3.1\5.3\msvc2013_opengl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -78,7 +78,7 @@
 #include "../header/ham-kma.h"
 #include "../header/tag-etri.h"
 
-#ifdef WINDOWS_DLL
+#ifdef WINDOWS_DLL_CPP
 #include "..\hdic2\dicpos.h"
 #include "..\hdic2\pomi.h"
 #include "..\hdic2\xomi.h"
@@ -349,12 +349,12 @@ int hamout2tokenList(
 		if (stemleng > wordleng) stemleng = wordleng;
 
 		if (i) *out++ = ' ';
-		strncpy((char*) out, (char*) word, stemleng); n++;
+		strncpy_s((char*) out,10, (char*) word, stemleng); n++;
 		out += stemleng;
 
 		if (wordleng > stemleng) {
 			*out++ = tokendelim; *out = 0;
-			strcat((char*) out-1, (char*) word+stemleng); n++;
+			strcat_s((char*) out-1,10, (char*) word+stemleng); n++;
 			out += wordleng-stemleng;
 		}
 	}
